@@ -1,0 +1,81 @@
+.container {
+  background-color: rgb(173, 3, 99);
+  padding: 0 50px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+.item:last-child {
+  justify-content: flex-end;
+}
+.callBtnImg {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin-left: 20px;
+}
+.text:nth-child(1) {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.text:nth-child(2) {
+  font-weight: 700;
+}
+.product {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+}
+.productList {
+  margin: 10px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.logo {
+  font-size: 30px;
+  font-family: cursive;
+  background-color: white;
+  color: rgb(173, 3, 99);
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 12px;
+}
+.logo:hover {
+  color: rgb(109, 3, 63);
+}
+
+.cart {
+  margin: 20px;
+  position: relative;
+}
+.counter {
+  /* position: absolute;
+  top: -10;
+  bottom: -10; */
+  background-color: white;
+}
