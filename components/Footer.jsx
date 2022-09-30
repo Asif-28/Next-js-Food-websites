@@ -1,7 +1,7 @@
-import React from "react";
-
+// Import Swiper styles
+import "swiper/css";
 const Footer = () => {
-  return <div>Footer</div>;
+  return <div></div>;
 };
 
 export default Footer;
