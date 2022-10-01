@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Features from "../components/Features";
+import FoodList from "../components/FoodList";
 import Greet from "../components/Greet";
 import styles from "../styles/Home.module.css";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Features />
+      <FoodList />
     </div>
   );
 }

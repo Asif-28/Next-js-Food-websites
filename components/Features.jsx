@@ -41,7 +41,7 @@ const Features = () => {
       slidesPerView={1}
       spaceBetween={30}
       loop={true}
-      cssMode={true}
+      // cssMode={true}
       pagination={{
         clickable: true,
       }}

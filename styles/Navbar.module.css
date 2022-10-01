@@ -1,6 +1,6 @@
 .container {
   background-color: #202020;
-  padding: 0 50px;
+  padding: 0;
   height: 60px;
   width: 100vw;
   overflow: hidden;
@@ -9,6 +9,7 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 /* @media screen and (max-width: 768px) {
   .callBtnImg {
@@ -20,6 +21,9 @@
   display: flex;
 }
 
+.item:nth-child(1) {
+  padding-left: 30px;
+}
 .item:nth-child(2) {
   flex: 3;
 }
@@ -76,9 +80,10 @@
 }
 
 .cart {
-  margin: 20px;
+  margin: 30px;
   position: relative;
   cursor: pointer;
+  /* margin-bottom: 18px; */
 }
 .counterBtn {
   position: absolute;
