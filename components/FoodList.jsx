@@ -12,13 +12,7 @@ const FoodList = () => {
       </p>
       <div className={styles.wrapper}>
         <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
+        {/* <FoodCard /> */}
       </div>
     </div>
   );
