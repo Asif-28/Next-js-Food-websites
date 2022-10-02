@@ -1,7 +1,8 @@
 import styles from "../styles/Features.module.css";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Typed from "typed.js";
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -15,6 +16,9 @@ import "swiper/css/pagination";
 
 SwiperCore.use([Navigation, Pagination, Autoplay, Virtual]);
 const Features = () => {
+  const textRef = useRef();
+  const el = useRef(null);
+  const typed = useRef(null);
   const slides = [
     {
       img: "/img/screen1.jpg",

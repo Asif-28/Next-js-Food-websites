@@ -14,5 +14,14 @@
   cursor: pointer;
 }
 
+.imgContainer:hover {
+  scale: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+
 .image {
+  opacity: 0.8;
+}
+.image:hover {
+  opacity: 1;
 }
