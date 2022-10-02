@@ -1,14 +1,18 @@
 .container {
-  max-width: 33%;
+  max-width: 80%;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
   padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
 }
 .imgContainer {
   padding: 10px;
   text-align: center;
   cursor: pointer;
+}
+
+.image {
 }

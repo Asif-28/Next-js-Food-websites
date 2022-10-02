@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Features from "../components/Features";
 import FoodList from "../components/FoodList";
+import Footer from "../components/Footer";
 import Greet from "../components/Greet";
 import styles from "../styles/Home.module.css";
 

@@ -12,7 +12,6 @@ const FoodList = () => {
       </p>
       <div className={styles.wrapper}>
         <FoodCard />
-        {/* <FoodCard /> */}
       </div>
     </div>
   );
