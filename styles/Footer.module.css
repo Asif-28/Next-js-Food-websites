@@ -2,7 +2,7 @@
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   background-color: #222;
 }
 .item {
@@ -17,10 +17,15 @@
 }
 .card1 {
   color: yellow;
+  letter-spacing: 1px;
   /* padding: 10px; */
   font-size: 16px;
   /* text-align: center; */
 }
+.card2 {
+  letter-spacing: 1px;
+}
+
 .card3 {
   letter-spacing: 1px;
 }

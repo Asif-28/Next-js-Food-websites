@@ -1,7 +1,7 @@
 .container {
   background-color: #202020;
   padding: 0;
-  height: 60px;
+  height: 80px;
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -80,7 +80,7 @@
 }
 
 .cart {
-  margin: 30px;
+  margin: 50px;
   position: relative;
   cursor: pointer;
   /* margin-bottom: 18px; */
