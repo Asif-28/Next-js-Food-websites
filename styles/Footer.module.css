@@ -9,7 +9,7 @@
   flex: 1;
   display: flex;
   position: relative;
-  /* text-align: center; */
+
   padding: 20px;
 }
 .item:nth-child(1) {
@@ -28,4 +28,21 @@
 
 .card3 {
   letter-spacing: 1px;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+  }
+  .item:first-child {
+    display: none;
+  }
+  .item {
+    width: 80vw;
+    height: 80vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+  }
 }
