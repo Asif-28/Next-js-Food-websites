@@ -89,3 +89,41 @@
   font-weight: 600;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .imgContainer {
+    width: 70vw;
+    height: 70vw;
+  }
+  .sizes {
+    /* width: 100%;
+    padding: 0px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 50px;
+  }
+  .size {
+    margin-bottom: 30px;
+  }
+  .add {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .quantity,
+  .button {
+    height: 50px;
+    padding: 10px 20px;
+  }
+}

@@ -1,7 +1,6 @@
 .container {
   max-width: 80%;
   padding: 10px;
-
   padding: 20px 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,4 +23,10 @@
 }
 .image:hover {
   opacity: 1;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
