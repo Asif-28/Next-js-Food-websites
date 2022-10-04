@@ -1,5 +1,12 @@
 import styles from "../../styles/Order.module.css";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Table = dynamic(import("../../components/Table"), {
+  ssr: false,
+});
+
+// import Table from "../../components/Table";
 
 const Order = () => {
   const status = 0;
@@ -12,7 +19,7 @@ const Order = () => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <table className={styles.table}>
+        {/* <table className={styles.table}>
           <tr className={styles.trTitle}>
             <th>Order ID</th>
             <th>Customer</th>
@@ -33,7 +40,8 @@ const Order = () => {
               <span className={styles.total}>RS 500</span>
             </td>
           </tr>
-        </table>
+        </table> */}
+        <Table name={"Asif"} />
 
         <div className={styles.row}>
           <div className={statusClass(0)}>
