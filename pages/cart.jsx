@@ -1,11 +1,17 @@
 import styles from "../styles/Cart.module.css";
 import Image from "next/image";
 import Table from "../components/Table";
+import dynamic from "next/dynamic";
+// import TableCart from "../components/TableCart";
+
+const TableCart = dynamic(import("../components/TableCart"), {
+  ssr: false,
+});
 export const Cart = () => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <div className={styles.table}>
+        {/* <div className={styles.table}>
           <ul className={styles.ul}>
             <li className={styles.li}>Product</li>
             <li className={styles.li}>Name</li>
@@ -38,7 +44,8 @@ export const Cart = () => {
               <span className={styles.total}>Rs398</span>
             </li>
           </ul>
-        </div>
+        </div> */}
+        <TableCart name="asif" />
       </div>
       <div className={styles.right}>
         <div className={styles.wrapper}>

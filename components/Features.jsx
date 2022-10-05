@@ -33,7 +33,7 @@ const Features = () => {
       para: "lorem ipsum dolor gdfg dfgdfg gdfgdf dfgfdgf sit amet, consectetur sdfsdfsd adipisicing",
     },
     {
-      img: "/img/screen2.jpeg",
+      img: "/img/screen2.jpg",
       id: 3,
       text: "ALL TYPES OF DISHES ARE AVAILABLE HERE ",
       para: "lorsdfem ipsum dolor  dfgdfg gghfgh dfhh hgsdfg gdfgfdg sit amet, consectetur sdfsdfsdf adipisicing ",

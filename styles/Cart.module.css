@@ -13,35 +13,25 @@
   height: 100px;
   position: relative;
 }
-.table {
-  width: 80%;
-  border-spacing: 20px;
-}
-.ul {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.li {
-  text-decoration: none;
-  list-style: none;
-}
 
 .name {
-  /* font-weight: 50; */
   color: yellow;
   font-size: 18px;
-  margin-left: -45px;
+
   text-decoration: underline;
   /* line-height: 1.5; */
 }
-
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
 .total {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
 }
 .wrapper {
-  width: 90;
+  width: 90%;
   max-height: 300px;
   background-color: white;
   color: black;
@@ -57,13 +47,52 @@
   margin-right: 10px;
 }
 .button {
-  height: 300px;
+  height: 200px;
   color: rgb(116, 4, 4);
   font-weight: bold;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   background-color: yellow;
   border: none;
   border-radius: 12px;
   margin-top: 10px;
+  padding: 20px;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .titleRow {
+    display: none;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .total {
+    font-size: 24px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .imgContainer {
+    width: 35vw;
+    height: 35vw;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .button {
+    font-size: 16px;
+    height: 150px;
+  }
 }
