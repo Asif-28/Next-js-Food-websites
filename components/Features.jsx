@@ -66,13 +66,14 @@ const Features = () => {
               />
               <div className={styles.texts}>
                 <h1
-                  style={{
-                    zIndex: "3",
-                    fontSize: "3rem",
-                    maxWidth: "70vw",
-                    fontFamily: "cursive",
-                    color: "yellow",
-                  }}
+                  className={styles.heading}
+                  // style={{
+                  //   zIndex: "3",
+                  //   fontSize: "3rem",
+                  //   maxWidth: "70vw",
+                  //   fontFamily: "cursive",
+                  //   color: "yellow",
+                  // }}
                 >
                   {i.text}
                 </h1>
