@@ -53,6 +53,7 @@
   border: none;
   border: 2px solid yellow;
   border-radius: 12px;
+  color: white;
 }
 .btn:hover {
   font-size: 18px;

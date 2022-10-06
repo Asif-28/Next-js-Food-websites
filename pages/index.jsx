@@ -5,8 +5,9 @@ import FoodList from "../components/FoodList";
 import Footer from "../components/Footer";
 import Greet from "../components/Greet";
 import styles from "../styles/Home.module.css";
-
+// import dbConnect from "../util/mongo";
 export default function Home() {
+  // dbConnect();
   return (
     <div className={styles.container}>
       <Head>
