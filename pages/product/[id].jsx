@@ -2,15 +2,16 @@ import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
-export const Product = () => {
+export const Product = ({ productItem }) => {
   const [size, setSize] = useState(0);
-  const productItem = {
-    id: 1,
-    img: "/img/f2.jpg",
-    title: " Our Special ",
-    price: [199, 299, 499],
-    desc: "this is the special item avialable in out fooding corner ",
-  };
+  // const productItem = {
+  //   id: 1,
+  //   img: "/img/f2.jpg",
+  //   title: " Our Special ",
+  //   price: [199, 299, 499],
+  //   desc: "this is the special item avialable in out fooding corner ",
+  // };
+  console.log(productItem);
   return (
     <div className={styles.container}>
       <div className={styles.leftContainer}>
@@ -92,16 +93,16 @@ export const Product = () => {
     </div>
   );
 };
-// export const getServerSideProps = async ({ params }) => {
-//   const res = await axios.get(
-//     `http://localhost:3000/api/products/${params.id}`
-//   );
-//   return {
-//     props: {
-//       productItem: res.data,
-//     },
-//   };
-// };
+export const getServerSideProps = async ({ params }) => {
+  const res = await axios.get(
+    `http://localhost:3000/api/products/${params.id}`
+  );
+  return {
+    props: {
+      productItem: res.data,
+    },
+  };
+};
 export default Product;
 
 {

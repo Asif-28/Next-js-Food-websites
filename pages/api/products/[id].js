@@ -8,12 +8,14 @@ export default async function handler(req, res) {
   console.log("Connecting to Mongo");
   await connectMongo();
   console.log("Connected to Mongo");
+
   if (method === "GET") {
     try {
-      const product = await Product.findById({ id });
+      const product = await Product.findById(id);
+      console.log(product);
       res.status(200).json(product);
     } catch (err) {
-      res.status(500).json(err);
+      res.status(500).json({ message: "Error getting" });
     }
   }
   if (method === "PUT") {
