@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className={styles.container}>
@@ -26,13 +27,15 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.cart}>
-          <Image
-            src="/img/cart.png"
-            className={styles.cartImg}
-            alt=""
-            height="30 "
-            width="30 "
-          />
+          <Link href="/order/id">
+            <Image
+              src="/img/cart.png"
+              className={styles.cartImg}
+              alt=""
+              height="30 "
+              width="30 "
+            />
+          </Link>
           <div className={styles.counterBtn}> 2</div>
         </div>
       </div>

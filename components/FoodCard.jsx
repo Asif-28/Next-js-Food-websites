@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/FoodCard.module.css";
 export const FoodCard = () => {
   const data = [
@@ -50,14 +51,16 @@ export const FoodCard = () => {
       {data.map((item) => {
         return (
           <div className={styles.imgContainer} key={item.id}>
-            <Image
-              style={{ borderRadius: "12px" }}
-              className={styles.image}
-              src={item.img}
-              alt=""
-              width="600"
-              height="500"
-            />
+            <Link href="/product/id">
+              <Image
+                style={{ borderRadius: "12px" }}
+                className={styles.image}
+                src={item.img}
+                alt=""
+                width="600"
+                height="500"
+              />
+            </Link>
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
             <span style={{ textDecoration: "underline" }}>{item.price}</span>
