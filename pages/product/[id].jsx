@@ -4,14 +4,28 @@ import { useState } from "react";
 import axios from "axios";
 export const Product = ({ productItem }) => {
   const [size, setSize] = useState(0);
-  // const productItem = {
-  //   id: 1,
-  //   img: "/img/f2.jpg",
-  //   title: " Our Special ",
-  //   price: [199, 299, 499],
-  //   desc: "this is the special item avialable in out fooding corner ",
-  // };
-  console.log(productItem);
+  const [options, setOptions] = useState([]);
+  const [oquantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState(productItem.price[0]);
+  const changePrice = (number) => {
+    setPrice(price + number);
+  };
+  const onChangeSize = (sizeIndex) => {
+    const diff = productItem.price[sizeIndex] - productItem.price[size];
+    setSize(sizeIndex);
+    changePrice(diff);
+  };
+  const handleChange = (e, item) => {
+    const checked = e.target.checked;
+    if (checked) {
+      changePrice(item.price);
+      setOptions((prev) => [...prev, item]);
+    } else {
+      changePrice(-item.price);
+      setOptions(options.filter((extra) => extra._id != item._id));
+    }
+  };
+  // console.log(productItem);
   return (
     <div className={styles.container}>
       <div className={styles.leftContainer}>
@@ -26,67 +40,48 @@ export const Product = ({ productItem }) => {
       </div>
       <div className={styles.rightContainer}>
         <h1 className={styles.title}>{productItem.title}</h1>
-        <span className={styles.price}>Rs {productItem.price[size]}</span>
+        <span className={styles.price}>Rs {price}</span>
         <p className={styles.desc}>{productItem.desc}</p>
         <h3 className={styles.choose}>Choose the item quantity</h3>
         <div className={styles.sizes}>
-          <div className={styles.size} onClick={() => setSize(0)}>
+          <div className={styles.size} onClick={() => onChangeSize(0)}>
             <button className={styles.btn}>Small</button>
           </div>
           <div className={styles.size}>
-            <button className={styles.btn} onClick={() => setSize(1)}>
+            <button className={styles.btn} onClick={() => onChangeSize(1)}>
               Medium
             </button>
             <span className={styles.number}>Best Deal!!</span>
           </div>
           <div className={styles.size}>
-            <button className={styles.btn} onClick={() => setSize(2)}>
+            <button className={styles.btn} onClick={() => onChangeSize(2)}>
               Large
             </button>
           </div>
         </div>
-        <h3 className={styles.choose}>Choose additional ingredients</h3>
+        <h3 className={styles.choose}>Choose additional items</h3>
         <div className={styles.extraItems}>
-          <div className={styles.option}>
-            <input
-              type="checkbox"
-              id="soup"
-              name="soup"
-              className={styles.checkbox}
-            />
-            <label htmlFor="soup">Exta soup</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="sausage"
-              name="sausage"
-            />
-            <label htmlFor="sausage">Special sausage</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="mayonnaise"
-              name="mayonnaise"
-            />
-            <label htmlFor="mayonnaise">Extra mayonnaise</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="garlic"
-              name="garlic"
-            />
-            <label htmlFor="garlic">Garlic Sauce</label>
-          </div>
+          {productItem.extraOptions.map((item) => (
+            <div className={styles.option} key={item._id}>
+              <input
+                type="checkbox"
+                id={item.text}
+                name={item.text}
+                className={styles.checkbox}
+                onChange={(e) => handleChange(e, item)}
+              />
+              <label htmlFor="soup">{item.text}</label>
+            </div>
+          ))}
         </div>
 
         <div className={styles.add}>
-          <input type="number" defaultValue={1} className={styles.quantity} />
+          <input
+            onChange={(e) => setQuantity(e.target.value)}
+            type="number"
+            defaultValue={1}
+            className={styles.quantity}
+          />
           <button className={styles.btn}>Add to cart</button>
         </div>
       </div>
