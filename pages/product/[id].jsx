@@ -89,6 +89,7 @@ export const Product = ({ productItem }) => {
             onChange={(e) => setQuantity(e.target.value)}
             type="number"
             defaultValue={1}
+            min="0"
             className={styles.quantity}
           />
           <button className={styles.btn} onClick={handleClick}>
