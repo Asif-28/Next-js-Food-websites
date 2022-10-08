@@ -2,11 +2,15 @@ import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 export const Product = ({ productItem }) => {
   const [size, setSize] = useState(0);
   const [options, setOptions] = useState([]);
-  const [oquantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(productItem.price[0]);
+  const dispatch = useDispatch();
+
   const changePrice = (number) => {
     setPrice(price + number);
   };
@@ -22,8 +26,13 @@ export const Product = ({ productItem }) => {
       setOptions((prev) => [...prev, item]);
     } else {
       changePrice(-item.price);
-      setOptions(options.filter((extra) => extra._id != item._id));
+      setOptions(options.filter((option) => option._id != item._id));
     }
+  };
+  // console.log(productItem);
+  const handleClick = () => {
+    dispatch(addProduct({ ...productItem, quantity, options, price }));
+    console.log(price);
   };
   // console.log(productItem);
   return (
@@ -51,7 +60,7 @@ export const Product = ({ productItem }) => {
             <button className={styles.btn} onClick={() => onChangeSize(1)}>
               Medium
             </button>
-            <span className={styles.number}>Best Deal!!</span>
+            <span className={styles.number}>Best Deal !!</span>
           </div>
           <div className={styles.size}>
             <button className={styles.btn} onClick={() => onChangeSize(2)}>
@@ -82,7 +91,9 @@ export const Product = ({ productItem }) => {
             defaultValue={1}
             className={styles.quantity}
           />
-          <button className={styles.btn}>Add to cart</button>
+          <button className={styles.btn} onClick={handleClick}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
