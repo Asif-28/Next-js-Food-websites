@@ -3,12 +3,10 @@ import styles from "../styles/Cart.module.css";
 const TableCart = ({ cart }) => {
   var img, title;
   var extras = [];
-  var extraOption = [];
 
   cart.products.map((product) => {
     img = product.img;
     title = product.title;
-    extras = product.extraOptions;
   });
   // extras.map((i) => {
   //   extraOption = i.text;
@@ -20,7 +18,6 @@ const TableCart = ({ cart }) => {
       <tr className={styles.titleRow}>
         <th>Product</th>
         <th>Name</th>
-        <th>Extras</th>
         <th>Quantity</th>
         <th>Total</th>
       </tr>
@@ -40,9 +37,7 @@ const TableCart = ({ cart }) => {
         <td>
           <span className={styles.name}>{title}</span>
         </td>
-        <td>
-          <span className={styles.extra}>{extraOption}</span>
-        </td>
+
         <td>
           <span className={styles.quantity}>{cart.quantity}</span>
         </td>

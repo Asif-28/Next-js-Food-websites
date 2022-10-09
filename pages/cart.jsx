@@ -21,13 +21,13 @@ export const Cart = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.total}>CART TOTAL</h2>
           <div className={styles.totalItm}>
-            <b className={styles.totalItmTitle}> SubTotal:</b> Rs 398.0
+            <b className={styles.totalItmTitle}> SubTotal:</b> Rs {cart.total}
           </div>
           <div className={styles.totalItm}>
             <b className={styles.totslItmTitle}> Discount:</b> Rs 0.0
           </div>
           <div className={styles.totalItm}>
-            <b className={styles.totslItmTitle}> Total:</b> Rs 398.0
+            <b className={styles.totslItmTitle}> Total:</b> Rs {cart.total}
           </div>
           <button className={styles.button}>CHECKOUT NOW!!</button>
         </div>

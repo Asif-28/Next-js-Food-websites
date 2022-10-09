@@ -25,6 +25,7 @@
   width: 100%;
   text-align: left;
   margin-bottom: 50px;
+  border-spacing: 20px;
 }
 .total {
   font-weight: 500;
@@ -69,6 +70,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .titleRow {
     display: none;
   }
