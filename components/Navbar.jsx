@@ -19,11 +19,18 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.product}>
-          <li className={styles.productList}> Homepage</li>
-          <li className={styles.productList}> Menu</li>
-          <div className={styles.logo}> foodiijzz</div>
-
-          <li className={styles.productList}>Contact</li>
+          <Link href="/">
+            <li className={styles.productList}> Homepage</li>
+          </Link>
+          <Link href="/product">
+            <li className={styles.productList}> Menu</li>
+          </Link>
+          <Link href="/">
+            <div className={styles.logo}> foodiijzz</div>
+          </Link>
+          <Link href="/">
+            <li className={styles.productList}>Contact</li>
+          </Link>
           <li className={styles.productList}>Event</li>
           <li className={styles.productList}>Blog</li>
         </ul>

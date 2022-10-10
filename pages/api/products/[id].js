@@ -1,5 +1,5 @@
 import Product from "../../../models/Product";
-import connectMongo from "../../../util/connectMOngo";
+import connectMongo from "../../../util/connectMongo";
 export default async function handler(req, res) {
   const {
     method,

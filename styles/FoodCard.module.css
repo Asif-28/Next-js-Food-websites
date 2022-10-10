@@ -15,17 +15,15 @@
 
   /* ; */
 }
+.container:hover {
+  scale: 1.2;
+  transition: all 0.5s ease-in-out;
+}
 .imgContainer {
   padding: 10px;
   text-align: center;
   cursor: pointer;
   margin-bottom: 40px;
-}
-
-.imgContainer:hover {
-  scale: 1.2;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 10px;
 }
 
 .image {
