@@ -23,13 +23,13 @@ const Features = () => {
     {
       img: "/img/screen1.jpg",
       id: 1,
-      text: " WELCOME TO OUR FOODING CORNER",
-      para: "loredfm ipsum dolor sit amet,  gh d, dsfgdfs, sgdfg df fdgdfg  dfgdfgsd,d gsdfgsdgsdg,consec fghtetur sd fsd adipsdfdssicing",
+      text: " WELCOME TO OUR FOODING CORNER..",
+      para: "loredfm ipsum dolor sit amet,  gh d sdsasd , dsfgdfs, sgdfg df fdgdfg  dfgdfgsd,d gsdfgsdgsdg,consec fghtetur sd fsd adipsdfdssicing",
     },
     {
       img: "/img/screen3.jpg",
       id: 2,
-      text: " WE PROVIDE THER BEST FOODING EXPERIENCE ",
+      text: " WE PROVIDE THER BEST FOODING EXPERIENCE FOR YOU ",
       para: "lorem ipsum dolor gdfg dfgdfg gdfgdf dfgfdgf sit amet, consectetur sdfsdfsd adipisicing",
     },
     {
